@@ -1,6 +1,6 @@
-FROM restic/restic:0.9.2
+FROM restic/restic:0.12.1
 
-ADD https://github.com/just-containers/s6-overlay/releases/download/v1.21.4.0/s6-overlay-amd64.tar.gz /tmp/
+ADD https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-amd64.tar.gz /tmp/
 RUN gunzip -c /tmp/s6-overlay-amd64.tar.gz | tar -xf - -C /
 
 RUN apk add --no-cache openssh-client curl sshpass \
